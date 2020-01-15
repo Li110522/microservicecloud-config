@@ -6,10 +6,26 @@ spring:
 spring: 
   profiles: dev
   application: 
-    name: microservicecloud-github-config-client
+    name: microservicecloud-github-config-client-8021
 
 server: 
   port: 8201
+  
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://eureka.7001.com:7001/eureka/,http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
+
+---
+spring: 
+  profiles: test
+  application: 
+    name: microservicecloud-github-config-client-8202
+
+server: 
+  port: 8202
   
 eureka:
   client:
