@@ -1,12 +1,21 @@
-spring:
-  profiles:
-  active:
-  - dev
+spring: 
+  profiles: 
+    active: 
+    - dev
 ---
-spring:
-  profiles: test
-server:
-  port:8201
+spring: 
+  profiles: dev
+  application: 
+    name: microservicecloud-config-client
+
+server: 
+  port: 8201
   
----
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://eureka.7001.com:7001/eureka/,http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
+
         
