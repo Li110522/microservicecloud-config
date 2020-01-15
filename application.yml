@@ -1,15 +1,6 @@
-spring:
-    profiles:
-      active:
-      - dev
----
-spring:
-    profiles: dev
-    application:
-        name: microservicecloud-config-atguigu-dev
----
-spring:
-    profiles: test
-    application:
-        name: microservicecloud-config-atguigu-test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka.7001.com:7001/eureka/,http://eureka.7002.com:7002/eureka/,http://eureka.7003.com:7003/eureka/
+
         
