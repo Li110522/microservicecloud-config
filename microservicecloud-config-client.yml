@@ -6,7 +6,7 @@ spring:
 spring: 
   profiles: dev
   application: 
-    name: microservicecloud-config-client
+    name: microservicecloud-github-config-client
 
 server: 
   port: 8201
